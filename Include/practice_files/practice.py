@@ -10,7 +10,6 @@
 # latter=latter.replace("<|Date|>",date)
 # print(latter)
 # #from here
-
 # #finding doubke space
 # string="This program is for  deteting 2 charecter"
 # print(string[0::3])

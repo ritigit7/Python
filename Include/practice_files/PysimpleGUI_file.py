@@ -25,8 +25,6 @@ window.close()
 
 
 
-
-
 # layout = [[sg.Text('Enter the first number:'), sg.InputText()],
 #           [sg.Text('Enter the second number:'), sg.InputText()],
 #           [sg.Button('Add'), sg.Button('Cancel')]]
