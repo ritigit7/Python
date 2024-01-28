@@ -1,8 +1,8 @@
 import pymongo
 clint = pymongo.MongoClient("mongodb://localhost:27017/")
 print(clint)
-db = clint['trial']
-collection = db['python_mongodb']
+db = clint.trial
+collection = db.python_mongodb
 
 # document={'name':'Ritik','branch':'cs','number':77}
 # collection.insert_one(document)
@@ -32,6 +32,6 @@ collection = db['python_mongodb']
 # print(docs.count())
 # print(docs)
 
-prev={"item":"large box"}
-nextt={"$set":{"qty":99}}
-collection.update_one(prev,nextt)
+# prev={"item":"large box"}
+# nextt={"$set":{"qty":99}}
+# collection.update_one(prev,nextt)

@@ -9,13 +9,18 @@ while True:
     if event in (None,'Exit'):
         break
     if event=='click':
-        sg.popup('ok')
-        fl=open('D:/python programs/All/.venv/Include/practice_files/temp.txt')
-        txt=fl.read()
-        print( sg.popup_scrolled(txt))
-        print( sg.popup_get_file(txt,  title="File selector"))
-        fl.close()
+        # sg.popup('ok')
+        # fl=open('D:/python programs/All/.venv/Include/practice_files/temp.txt')
+        # txt=fl.read()
+        # print( sg.popup_scrolled(txt))
+        # print( sg.popup_get_file(txt,  title="File selector"))
+        # fl.close()
         # sg.popup_auto_close('This window will Autoclose')
+
+        choices = ['Choice 1', 'Choice 2', 'Choice 3']
+        combo = sg.Combo(choices, default_value='Choice 1')
+        
+
 window.close()
 
 
