@@ -1,8 +1,50 @@
-a="fjkd"
-print(type(a))
+from sklearn.datasets import make_classification
+import matplotlib.pyplot as plt
+import tensorflow 
+from tensorflow import keras
+from keras import Sequential
+from keras.layers import Dense
+import numpy as np
 
-if type(a)==str:
-    print("ok")
+X,y=make_classification(n_samples=500,n_features=2,n_informative=2,n_redundant=0,n_classes=2,n_clusters_per_class=1,random_state=500)
+
+plt.scatter(X[:, 0], X[:, 1], marker='o', c=y,s=25, edgecolor='k')
+plt.show()
+
+model=Sequential()
+model.add(Dense(2,activation='relu',input_dim=2))
+model.add(Dense(1,activation='sigmoid'))
+
+model.summary()
+
+initial_weights=model.get_weights()
+initial_weights[0]=np.zeros(model.get_weights()[0].shape)
+initial_weights[1]=np.zeros(model.get_weights()[1].shape) 
+initial_weights[2]=np.zeros(model.get_weights()[2].shape)
+initial_weights[3]=np.zeros(model.get_weights()[3].shape)
+
+model.set_weights(initial_weights)
+model.get_weights()
+
+model.compile(optimizer='adam',metrics=['accuracy'],loss='binary_crossentropy')
+
+
+
+
+# from sklearn.datasets import make_classification
+# import matplotlib.pyplot as plt
+
+# X, y = make_classification(n_samples=1000, n_features=20, n_informative=10, n_classes=2, random_state=80)
+# print(X,y)
+# plt.scatter(X[:, 0], X[:, 1], marker='o', c=y,s=25, edgecolor='k')
+# plt.show()
+
+
+
+# print(type(a))
+
+# if type(a)==str:
+#     print("ok")
 
 
 
