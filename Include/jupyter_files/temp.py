@@ -81,3 +81,4 @@ model.compile(optimizer='adam',metrics=['accuracy'],loss='binary_crossentropy')
 
 # import timeit
 # print(timeit.timeit('[func(1) for func in (f,g,h)]', globals=globals()))
+
