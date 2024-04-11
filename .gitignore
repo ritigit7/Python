@@ -5,3 +5,5 @@ Scripts/
 share/
 Include/jupyter_files/Deep-Learning/mkdir
 Include/jupyter_files/Deep-Learning/mydir
+*.png
+*.jpg
